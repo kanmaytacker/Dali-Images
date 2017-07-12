@@ -1,7 +1,7 @@
 # Dali-Images
 Dali lets you upload image and resizes them to four sizes and saves these images on Google Cloud Storage
 
-![Alt Text](https://github.com/kanmaytacker/Dali-Images/raw/master/0fup8E.gif)
+![Alt Text](https://github.com/kanmaytacker/Dali-Images/raw/master/dali.gif)
 
 # Geting Started
 
