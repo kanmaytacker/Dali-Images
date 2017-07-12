@@ -1,0 +1,13 @@
+.footer {
+	background-color: #755b79;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+ .ui.block.header {
+ 	background: #755b79;
+ 	color: #755b79;
+ }
+
+
