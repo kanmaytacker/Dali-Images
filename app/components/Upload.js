@@ -6,16 +6,21 @@ const { object, boolean, string } = React.PropTypes;
 export default class Upload extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+
+    this.getDefaultState = this.getDefaultState.bind(this);
+    this.state = this.getDefaultState();
+    this.selectImage = this.selectImage.bind(this);
+    this.upload = this.upload.bind(this);
+    this.popupClose = this.popupClose.bind(this);
+  }
+
+  getDefaultState() {
+    return {
       file: null,
       selected: false,
       uploading: false,
       ImageSrc: ''
     };
-
-    this.selectImage = this.selectImage.bind(this);
-    this.upload = this.upload.bind(this);
-    this.popupClose = this.popupClose.bind(this);
   }
 
   popupClose() {
@@ -36,22 +41,12 @@ export default class Upload extends React.Component {
           this.props.getImageList(response.data.images);
         } else {
           alert(response.data.error.message);
-          this.setState({
-            file: null,
-            selected: false,
-            uploading: false,
-            ImageSrc: ''
-          });
+          this.setState(this.getDefaultState());
         }
       })
       .catch((error) => {
         alert(error.message);
-        this.setState({
-          file: null,
-          selected: false,
-          uploading: false,
-          ImageSrc: ''
-        });
+        this.setState(this.getDefaultState());
       });
     }
   }
