@@ -21,10 +21,9 @@ export default class App extends React.Component {
     return (
             <div>
               <Header as="h1" block className={styles.header} style={{background: '#755b79'}}>
-                <Image shape="circular" src="https://baterbys.com/wp-content/uploads/2014/06/salvador-dali2.jpg"/> Dali
+                <Image shape="circular" src="https://baterbys.com/wp-content/uploads/2014/06/salvador-dali2.jpg" /> Dali
               </Header>
               <Preview imageUrls={this.state.imageUrls}/>
-
               <Footer getImageList={this.getImageList} />
             </div>
             );
